@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>BioCell Nexus Impact Calculator</h1>
+
+        <div class="input-section">
+            <label>Hospital Beds:</label>
+            <input type="range" id="hospitalBeds" min="50" max="2000" value="300">
+            <span id="bedValue">300</span>
+
+            <label>Waste Per Bed Per Day (kg):</label>
+            <input type="range" id="wastePerBed" min="0.5" max="3.0" step="0.1" value="1.5">
+            <span id="wasteValue">1.5</span>
+
+            <label>Adoption Rate (%):</label>
+            <input type="range" id="adoptionRate" min="0" max="100" value="35">
+            <span id="adoptionValue">35</span>
+        </div>
+
+        <div class="progress-bar">
+            <label>Adoption Progress:</label>
+            <progress id="adoptionProgress" value="35" max="100"></progress>
+        </div>
+
+        <div id="impactResults"></div>
+
+        <canvas id="outputChart"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
